@@ -18,6 +18,25 @@ const Button = () => {
   return <button onClick={onClick}>click!</button>;
 }
 
+const Counter = () => {
+  const [count, setCount] = React.useState(0);
+  const countUp = () => {
+    setCount(prev => prev + 1);
+  }
+  const countDown = () => {
+    setCount(prev => prev - 1);
+  }
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={countUp}>count up</button>
+      <button onClick={countDown}>count down</button>
+    </div>
+  );
+
+}
+
 const Component = () => {
   return (
     // todo: Fragment を Babelが認識しないのでdiv。原因を調べる
@@ -27,6 +46,7 @@ const Component = () => {
         <Text textColor="#666">event delegate のテスト</Text>
         <Button />
       </div>
+      <Counter />
     </div>
   );
 }
