@@ -1,0 +1,22 @@
+{
+  "name": "react-on-raw-html",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve . -p 3500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/neripark/react-on-raw-html.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neripark/react-on-raw-html/issues"
+  },
+  "homepage": "https://github.com/neripark/react-on-raw-html#readme",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
