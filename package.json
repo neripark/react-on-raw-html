@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "serve": "serve . -p 3500"
+    "serve": "serve src/ -p 3500"
   },
   "repository": {
     "type": "git",
