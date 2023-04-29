@@ -30,5 +30,6 @@ const Component = () => {
 // ___________________________________________________________________
 //
 const reactTarget = document.querySelector("#react-target");
-ReactDOM.render(Component(), reactTarget);
+const root = ReactDOM.createRoot(reactTarget);
+root.render(<Component />);
 console.log("React version::", React.version);
