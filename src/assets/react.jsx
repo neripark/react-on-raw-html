@@ -18,11 +18,35 @@ const Button = () => {
   return <button onClick={onClick}>click!</button>;
 }
 
-const Component = () => {
+const Counter = () => {
+  const [count, setCount] = React.useState(0);
+  const countUp = () => {
+    setCount(prev => prev + 1);
+  }
+  const countDown = () => {
+    setCount(prev => prev - 1);
+  }
+
   return (
     <div>
-      <Text textColor="#666">event delegate のテスト</Text>
-      <Button />
+      <p>{count}</p>
+      <button onClick={countUp}>count up</button>
+      <button onClick={countDown}>count down</button>
+    </div>
+  );
+
+}
+
+const Component = () => {
+  return (
+    // todo: Fragment を Babelが認識しないのでdiv。原因を調べる
+    <div>
+      <h1>React リーディング</h1>
+      <div>
+        <Text textColor="#666">event delegate のテスト</Text>
+        <Button />
+      </div>
+      <Counter />
     </div>
   );
 }
@@ -30,5 +54,6 @@ const Component = () => {
 // ___________________________________________________________________
 //
 const reactTarget = document.querySelector("#react-target");
-ReactDOM.render(Component(), reactTarget);
+const root = ReactDOM.createRoot(reactTarget);
+root.render(<Component />);
 console.log("React version::", React.version);
