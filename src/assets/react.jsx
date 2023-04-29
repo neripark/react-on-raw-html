@@ -20,9 +20,13 @@ const Button = () => {
 
 const Component = () => {
   return (
+    // todo: Fragment を Babelが認識しないのでdiv。原因を調べる
     <div>
-      <Text textColor="#666">event delegate のテスト</Text>
-      <Button />
+      <h1>React リーディング</h1>
+      <div>
+        <Text textColor="#666">event delegate のテスト</Text>
+        <Button />
+      </div>
     </div>
   );
 }
